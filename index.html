@@ -3,693 +3,526 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>F88 247 Lê Duẩn</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f7f6;
-color:#111827;
+  background:#f7faf8;
+  color:#111827;
 }
 
-/* HEADER */
-
 header{
-height:90px;
-background:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 70px;
-box-shadow:0 3px 15px rgba(0,0,0,0.06);
-position:sticky;
-top:0;
-z-index:100;
+  background:#fff;
+  height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 70px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 
 .logo-wrap{
-display:flex;
-align-items:center;
-gap:15px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  font-size:22px;
+  font-weight:800;
 }
 
 .logo{
-background:#49a95c;
-color:white;
-padding:18px 24px;
-border-radius:18px;
-font-size:30px;
-font-weight:bold;
-}
-
-.logo-text{
-font-size:22px;
-font-weight:800;
+  background:#49a95c;
+  color:#fff;
+  padding:18px 24px;
+  border-radius:16px;
+  font-size:30px;
+  font-weight:900;
 }
 
 nav{
-display:flex;
-gap:28px;
+  display:flex;
+  gap:28px;
 }
 
 nav a{
-text-decoration:none;
-color:#111827;
-font-weight:700;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#49a95c;
-}
-
-.header-right{
-display:flex;
-align-items:center;
-gap:18px;
+  text-decoration:none;
+  color:#111827;
+  font-weight:700;
 }
 
 .hotline{
-font-size:18px;
-font-weight:900;
-color:#d63d67;
-line-height:1.3;
+  color:#d63d67;
+  font-weight:900;
+  line-height:1.25;
+  font-size:18px;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
 }
 
 .btn{
-display:inline-block;
-padding:16px 26px;
-border-radius:18px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+  display:inline-block;
+  text-decoration:none;
+  border:none;
+  padding:16px 26px;
+  border-radius:16px;
+  font-weight:800;
+  cursor:pointer;
 }
 
 .btn-green{
-background:#49a95c;
-color:white;
-box-shadow:0 10px 25px rgba(73,169,92,0.3);
-}
-
-.btn-green:hover{
-transform:translateY(-2px);
+  background:#49a95c;
+  color:white;
+  box-shadow:0 12px 25px rgba(73,169,92,0.28);
 }
 
 .btn-white{
-background:white;
-border:1px solid #d7dde7;
-color:#111827;
+  background:white;
+  color:#111827;
+  border:1px solid #d9e0ea;
 }
 
-/* HERO */
-
 .hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-padding:80px 70px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  padding:80px 70px;
+  align-items:center;
 }
 
 .tag{
-display:inline-block;
-background:#e7f8ea;
-color:#2d6a39;
-padding:14px 22px;
-border-radius:999px;
-font-weight:bold;
-margin-bottom:28px;
-border:1px solid #ccefd4;
+  display:inline-block;
+  background:#e9f9ed;
+  color:#276b35;
+  border:1px solid #cef0d5;
+  padding:14px 24px;
+  border-radius:999px;
+  font-weight:800;
+  margin-bottom:28px;
 }
 
-.hero h1{
-font-size:48px;
-line-height:1.3;
-margin-bottom:25px;
+h1{
+  font-size:46px;
+  line-height:1.28;
+  margin-bottom:24px;
 }
 
-.hero p{
-font-size:23px;
-color:#6b7280;
-line-height:1.6;
-margin-bottom:35px;
+.desc{
+  font-size:22px;
+  color:#6b7280;
+  line-height:1.6;
+  margin-bottom:32px;
 }
 
-.hero-buttons{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-margin-bottom:35px;
+.cta{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:34px;
 }
 
 .cards{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
 }
 
 .card{
-background:white;
-padding:24px;
-border-radius:22px;
-border:1px solid #e5e7eb;
-display:flex;
-align-items:center;
-gap:16px;
-box-shadow:0 8px 20px rgba(0,0,0,0.04);
+  background:white;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:22px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
 }
 
 .icon{
-width:55px;
-height:55px;
-border-radius:16px;
-background:#f3f4f6;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
+  width:52px;
+  height:52px;
+  border-radius:15px;
+  background:#f2f4f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
 }
 
 .card h3{
-margin-bottom:6px;
-font-size:19px;
+  font-size:19px;
+  margin-bottom:6px;
 }
 
 .card p{
-font-size:16px;
-margin:0;
+  color:#6b7280;
 }
 
 .image-box{
-position:relative;
-border-radius:35px;
-overflow:hidden;
-border:10px solid white;
-box-shadow:0 20px 45px rgba(0,0,0,0.15);
+  position:relative;
+  border-radius:34px;
+  overflow:hidden;
+  border:10px solid white;
+  box-shadow:0 22px 50px rgba(0,0,0,0.16);
 }
 
 .image-box img{
-width:100%;
-height:650px;
-object-fit:cover;
-display:block;
+  width:100%;
+  height:630px;
+  object-fit:cover;
+  display:block;
 }
 
 .image-title{
-position:absolute;
-left:25px;
-bottom:25px;
-background:rgba(0,0,0,0.55);
-backdrop-filter:blur(8px);
-color:white;
-padding:16px 22px;
-border-radius:18px;
-font-size:26px;
-font-weight:bold;
+  position:absolute;
+  left:26px;
+  bottom:26px;
+  background:rgba(0,0,0,0.58);
+  color:white;
+  padding:16px 24px;
+  border-radius:16px;
+  font-size:24px;
+  font-weight:900;
 }
 
-/* SECTION */
-
 section{
-padding:70px;
+  padding:65px 70px;
 }
 
 .section-title{
-text-align:center;
-font-size:38px;
-margin-bottom:14px;
+  text-align:center;
+  font-size:38px;
+  margin-bottom:12px;
 }
 
 .section-sub{
-text-align:center;
-font-size:20px;
-color:#6b7280;
-margin-bottom:40px;
+  text-align:center;
+  color:#6b7280;
+  font-size:20px;
+  margin-bottom:38px;
 }
 
-.box-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
 }
 
 .box{
-background:white;
-padding:30px;
-border-radius:24px;
-border:1px solid #e5e7eb;
-box-shadow:0 10px 25px rgba(0,0,0,0.04);
+  background:white;
+  border:1px solid #e5e7eb;
+  border-radius:24px;
+  padding:30px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.04);
 }
 
 .box h3{
-font-size:24px;
-margin-bottom:12px;
+  font-size:24px;
+  margin-bottom:12px;
 }
 
 .box p{
-font-size:17px;
-color:#6b7280;
-line-height:1.6;
+  color:#6b7280;
+  font-size:17px;
+  line-height:1.6;
 }
-
-/* FORM */
 
 .form-wrap{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-background:white;
-padding:35px;
-border-radius:30px;
-border:1px solid #e5e7eb;
-box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  background:white;
+  border-radius:30px;
+  padding:35px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 12px 35px rgba(0,0,0,0.06);
 }
 
-input,
-select,
-textarea{
-width:100%;
-padding:18px;
-border-radius:16px;
-border:1px solid #d8dee8;
-margin-bottom:16px;
-font-size:16px;
+input,select,textarea{
+  width:100%;
+  padding:17px;
+  border-radius:15px;
+  border:1px solid #d9e0ea;
+  margin-bottom:15px;
+  font-size:16px;
 }
 
 textarea{
-height:120px;
-resize:none;
+  height:115px;
+  resize:none;
 }
 
 .map{
-border-radius:24px;
-overflow:hidden;
+  border-radius:24px;
+  overflow:hidden;
 }
 
-/* FLOAT BUTTON */
-
 .float{
-position:fixed;
-right:20px;
-bottom:20px;
-display:flex;
-flex-direction:column;
-gap:12px;
-z-index:100;
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:999;
 }
 
 .float a{
-text-decoration:none;
-padding:16px 22px;
-border-radius:999px;
-font-weight:bold;
-color:white;
-box-shadow:0 10px 24px rgba(0,0,0,0.2);
+  color:white;
+  text-decoration:none;
+  padding:15px 22px;
+  border-radius:999px;
+  font-weight:900;
+  box-shadow:0 10px 24px rgba(0,0,0,0.2);
 }
 
 .call{
-background:#49a95c;
+  background:#49a95c;
 }
 
 .zalo{
-background:#0b8cff;
+  background:#0b8cff;
 }
 
-/* FOOTER */
-
 footer{
-background:#111827;
-color:white;
-padding:40px 70px;
-margin-top:50px;
+  background:#111827;
+  color:white;
+  padding:38px 70px;
+  margin-top:40px;
 }
 
 footer p{
-margin-top:10px;
-color:#cbd5e1;
+  color:#cbd5e1;
+  margin-top:8px;
 }
-
-/* MOBILE */
 
 @media(max-width:900px){
+  header{
+    height:auto;
+    padding:18px;
+    flex-direction:column;
+    gap:16px;
+  }
 
-header{
-height:auto;
-padding:20px;
-flex-direction:column;
-gap:18px;
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:40px 20px;
+  }
+
+  h1{
+    font-size:34px;
+  }
+
+  .desc{
+    font-size:19px;
+  }
+
+  .cards,.grid-3,.form-wrap{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:40px 20px;
+  }
+
+  .image-box img{
+    height:430px;
+  }
 }
-
-nav{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.hero{
-grid-template-columns:1fr;
-padding:40px 20px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.box-grid{
-grid-template-columns:1fr;
-}
-
-.form-wrap{
-grid-template-columns:1fr;
-}
-
-section{
-padding:40px 20px;
-}
-
-.image-box img{
-height:430px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
+  <div class="logo-wrap">
+    <div class="logo">F88</div>
+    <div>F88 247 Lê Duẩn</div>
+  </div>
 
-<div class="logo-wrap">
+  <nav>
+    <a href="#uudiem">Ưu điểm</a>
+    <a href="#quytrinh">Quy trình</a>
+    <a href="#taisan">Tài sản</a>
+    <a href="#lienhe">Liên hệ</a>
+  </nav>
 
-<div class="logo">
-F88
-</div>
-
-<div class="logo-text">
-F88 247 Lê Duẩn
-</div>
-
-</div>
-
-<nav>
-<a href="#uudiem">Ưu điểm</a>
-<a href="#quytrinh">Quy trình</a>
-<a href="#taisan">Tài sản</a>
-<a href="#lienhe">Liên hệ</a>
-</nav>
-
-<div class="header-right">
-
-<div class="hotline">
-Hotline:<br>
-0847494567
-</div>
-
-<a href="tel:0847494567" class="btn btn-white">
-📞 Gọi ngay
-</a>
-
-</div>
-
+  <div class="header-right">
+    <div class="hotline">Hotline:<br>0847494567</div>
+    <a class="btn btn-white" href="tel:0354383060">📞 Gọi ngay</a>
+  </div>
 </header>
 
-<!-- HERO -->
-
 <div class="hero">
+  <div>
+    <div class="tag">📍 GẦN BẠN • HỖ TRỢ TẠI CHỖ</div>
 
-<div>
+    <h1>Hỗ trợ tài chính nhanh chóng, minh bạch cho bà con địa phương</h1>
 
-<div class="tag">
-📍 GẦN BẠN • HỖ TRỢ TẠI CHỖ
+    <p class="desc">
+      Giải ngân nhanh trong 15 phút. Thủ tục đơn giản bằng đăng ký xe máy, ô tô.
+      Hỗ trợ tận tâm và tư vấn rõ ràng.
+    </p>
+
+    <div class="cta">
+      <a href="#lienhe" class="btn btn-green">Đăng ký tư vấn ngay</a>
+      <a href="tel:0354383060" class="btn btn-white">📞 0354383060</a>
+    </div>
+
+    <div class="cards" id="uudiem">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <div>
+          <h3>Giải ngân nhanh</h3>
+          <p>Hỗ trợ nhanh tại quầy</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <div>
+          <h3>Hồ sơ dễ dàng</h3>
+          <p>Thủ tục đơn giản</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <div>
+          <h3>Minh bạch rõ ràng</h3>
+          <p>Thông tin minh bạch</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏠</div>
+        <div>
+          <h3>Ghé trực tiếp</h3>
+          <p>PGD dễ tìm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="f88.jpg" alt="F88 247 Lê Duẩn">
+    <div class="image-title">F88 247 Lê Duẩn</div>
+  </div>
 </div>
-
-<h1>
-Hỗ trợ tài chính nhanh chóng, minh bạch cho bà con địa phương
-</h1>
-
-<p>
-Giải ngân nhanh trong 15 phút. Thủ tục đơn giản bằng đăng ký xe máy, ô tô.
-Hỗ trợ tận tâm và tư vấn rõ ràng.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#lienhe" class="btn btn-green">
-Đăng ký tư vấn ngay
-</a>
-
-<a href="tel:0847494567" class="btn btn-white">
-📞 0847494567
-</a>
-
-</div>
-
-<div class="cards" id="uudiem">
-
-<div class="card">
-
-<div class="icon">
-⚡
-</div>
-
-<div>
-<h3>Giải ngân nhanh</h3>
-<p>Hỗ trợ nhanh tại quầy</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">
-📄
-</div>
-
-<div>
-<h3>Hồ sơ dễ dàng</h3>
-<p>Thủ tục đơn giản</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">
-🛡️
-</div>
-
-<div>
-<h3>Minh bạch rõ ràng</h3>
-<p>Thông tin minh bạch</p>
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="icon">
-🏠
-</div>
-
-<div>
-<h3>Ghé trực tiếp</h3>
-<p>PGD dễ tìm</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="image-box">
-
-<img src="f88.jpg">
-
-<div class="image-title">
-F88 247 Lê Duẩn
-</div>
-
-</div>
-
-</div>
-
-<!-- QUY TRÌNH -->
 
 <section id="quytrinh">
+  <h2 class="section-title">Quy trình hỗ trợ</h2>
+  <p class="section-sub">Nhanh chóng - minh bạch - dễ dàng</p>
 
-<h2 class="section-title">
-Quy trình hỗ trợ
-</h2>
+  <div class="grid-3">
+    <div class="box">
+      <h3>1️⃣ Tư vấn</h3>
+      <p>Nhân viên tiếp nhận nhu cầu và tư vấn phương án phù hợp.</p>
+    </div>
 
-<p class="section-sub">
-Nhanh chóng - minh bạch - dễ dàng
-</p>
+    <div class="box">
+      <h3>2️⃣ Hồ sơ</h3>
+      <p>Chuẩn bị giấy tờ cơ bản, kiểm tra thông tin nhanh chóng.</p>
+    </div>
 
-<div class="box-grid">
-
-<div class="box">
-<h3>1️⃣ Tư vấn</h3>
-<p>
-Nhân viên hỗ trợ tư vấn nhanh theo nhu cầu khách hàng.
-</p>
-</div>
-
-<div class="box">
-<h3>2️⃣ Hồ sơ</h3>
-<p>
-Chuẩn bị giấy tờ cơ bản và xác minh thông tin.
-</p>
-</div>
-
-<div class="box">
-<h3>3️⃣ Giải ngân</h3>
-<p>
-Hoàn tất thủ tục và nhận hỗ trợ nhanh chóng.
-</p>
-</div>
-
-</div>
-
+    <div class="box">
+      <h3>3️⃣ Giải ngân</h3>
+      <p>Hoàn tất thủ tục và nhận hỗ trợ nhanh tại phòng giao dịch.</p>
+    </div>
+  </div>
 </section>
-
-<!-- TÀI SẢN -->
 
 <section id="taisan">
+  <h2 class="section-title">Tài sản hỗ trợ</h2>
+  <p class="section-sub">Đa dạng phương án phù hợp nhu cầu khách hàng</p>
 
-<h2 class="section-title">
-Tài sản hỗ trợ
-</h2>
+  <div class="grid-3">
+    <div class="box">
+      <h3>🏍️ Đăng ký xe máy</h3>
+      <p>Thủ tục đơn giản, hỗ trợ nhanh, phù hợp nhiều khách hàng.</p>
+    </div>
 
-<p class="section-sub">
-Đa dạng phương án hỗ trợ
-</p>
+    <div class="box">
+      <h3>🚗 Đăng ký ô tô</h3>
+      <p>Hạn mức linh hoạt, tư vấn rõ ràng theo từng nhu cầu.</p>
+    </div>
 
-<div class="box-grid">
-
-<div class="box">
-<h3>🏍️ Xe máy</h3>
-<p>
-Hỗ trợ nhanh với đăng ký xe máy.
-</p>
-</div>
-
-<div class="box">
-<h3>🚗 Ô tô</h3>
-<p>
-Hạn mức linh hoạt theo nhu cầu.
-</p>
-</div>
-
-<div class="box">
-<h3>📱 Thiết bị khác</h3>
-<p>
-Liên hệ trực tiếp để được tư vấn thêm.
-</p>
-</div>
-
-</div>
-
+    <div class="box">
+      <h3>📱 Tài sản khác</h3>
+      <p>Liên hệ trực tiếp phòng giao dịch để được kiểm tra và tư vấn.</p>
+    </div>
+  </div>
 </section>
-
-<!-- FORM -->
 
 <section id="lienhe">
+  <h2 class="section-title">Đăng ký tư vấn</h2>
+  <p class="section-sub">Để lại thông tin, nhân viên sẽ liên hệ hỗ trợ</p>
 
-<h2 class="section-title">
-Đăng ký tư vấn
-</h2>
+  <div class="form-wrap">
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Họ và tên" required>
+      <input type="text" id="phone" placeholder="Số điện thoại" required>
 
-<p class="section-sub">
-Để lại thông tin để được hỗ trợ nhanh
-</p>
+      <select id="service">
+        <option>Đăng ký xe máy</option>
+        <option>Đăng ký ô tô</option>
+        <option>Tư vấn khác</option>
+      </select>
 
-<div class="form-wrap">
+      <textarea id="note" placeholder="Ghi chú thêm"></textarea>
 
-<div>
+      <button type="submit" class="btn btn-green">Gửi thông tin</button>
+    </form>
 
-<input type="text" placeholder="Họ và tên">
-
-<input type="text" placeholder="Số điện thoại">
-
-<select>
-<option>Nhu cầu hỗ trợ</option>
-<option>Đăng ký xe máy</option>
-<option>Đăng ký ô tô</option>
-<option>Tư vấn khác</option>
-</select>
-
-<textarea placeholder="Ghi chú thêm"></textarea>
-
-<button class="btn btn-green">
-Gửi thông tin
-</button>
-
-</div>
-
-<div class="map">
-
-<iframe
-src="https://www.google.com/maps?q=F88&output=embed"
-width="100%"
-height="450"
-style="border:0;"
-loading="lazy">
-</iframe>
-
-</div>
-
-</div>
-
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=F88%20247%20L%C3%AA%20Du%E1%BA%A9n&output=embed"
+        width="100%"
+        height="420"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
 </section>
 
-<!-- FLOAT -->
-
 <div class="float">
-
-<a href="tel:0847494567" class="call">
-📞 Gọi ngay
-</a>
-
-<a href="https://zalo.me/0847494567" class="zalo">
-💬 Zalo
-</a>
-
+  <a href="tel:0354383060" class="call">📞 Gọi ngay</a>
+  <a href="https://zalo.me/0354383060" class="zalo">💬 Zalo</a>
 </div>
 
-<!-- FOOTER -->
-
 <footer>
-
-<h2>
-F88 247 Lê Duẩn
-</h2>
-
-<p>
-Hotline: 0847494567
-</p>
-
-<p>
-Website hỗ trợ tư vấn khách hàng địa phương.
-</p>
-
+  <h2>F88 247 Lê Duẩn</h2>
+  <p>Hotline: 0847494567</p>
+  <p>Website hỗ trợ tư vấn khách hàng địa phương.</p>
 </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  alert("Bạn cần gửi tôi link Apps Script để tôi gắn form tự đổ Google Sheet.");
+
+  this.reset();
+});
+</script>
 
 </body>
 </html>
