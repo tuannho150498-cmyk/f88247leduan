@@ -3,102 +3,693 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F88</title>
+
+<title>F88 247 Lê Duẩn</title>
 
 <style>
 
-body{
-font-family:Arial;
-background:#f5f5f5;
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.header{
+body{
+background:#f5f7f6;
+color:#111827;
+}
+
+/* HEADER */
+
+header{
+height:90px;
 background:white;
-padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 70px;
+box-shadow:0 3px 15px rgba(0,0,0,0.06);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+background:#49a95c;
+color:white;
+padding:18px 24px;
+border-radius:18px;
 font-size:30px;
 font-weight:bold;
+}
+
+.logo-text{
+font-size:22px;
+font-weight:800;
+}
+
+nav{
+display:flex;
+gap:28px;
+}
+
+nav a{
+text-decoration:none;
+color:#111827;
+font-weight:700;
+transition:0.3s;
+}
+
+nav a:hover{
 color:#49a95c;
 }
 
-.main{
+.header-right{
 display:flex;
-padding:50px;
-gap:50px;
 align-items:center;
+gap:18px;
 }
 
-.left{
-width:50%;
+.hotline{
+font-size:18px;
+font-weight:900;
+color:#d63d67;
+line-height:1.3;
 }
 
-.right{
-width:50%;
+.btn{
+display:inline-block;
+padding:16px 26px;
+border-radius:18px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
 
-img{
+.btn-green{
+background:#49a95c;
+color:white;
+box-shadow:0 10px 25px rgba(73,169,92,0.3);
+}
+
+.btn-green:hover{
+transform:translateY(-2px);
+}
+
+.btn-white{
+background:white;
+border:1px solid #d7dde7;
+color:#111827;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+padding:80px 70px;
+}
+
+.tag{
+display:inline-block;
+background:#e7f8ea;
+color:#2d6a39;
+padding:14px 22px;
+border-radius:999px;
+font-weight:bold;
+margin-bottom:28px;
+border:1px solid #ccefd4;
+}
+
+.hero h1{
+font-size:48px;
+line-height:1.3;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:23px;
+color:#6b7280;
+line-height:1.6;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.card{
+background:white;
+padding:24px;
+border-radius:22px;
+border:1px solid #e5e7eb;
+display:flex;
+align-items:center;
+gap:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
+
+.icon{
+width:55px;
+height:55px;
+border-radius:16px;
+background:#f3f4f6;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+}
+
+.card h3{
+margin-bottom:6px;
+font-size:19px;
+}
+
+.card p{
+font-size:16px;
+margin:0;
+}
+
+.image-box{
+position:relative;
+border-radius:35px;
+overflow:hidden;
+border:10px solid white;
+box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+.image-box img{
 width:100%;
-border-radius:20px;
+height:650px;
+object-fit:cover;
+display:block;
 }
 
-h1{
-font-size:45px;
-line-height:1.4;
+.image-title{
+position:absolute;
+left:25px;
+bottom:25px;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(8px);
+color:white;
+padding:16px 22px;
+border-radius:18px;
+font-size:26px;
+font-weight:bold;
 }
 
-p{
-font-size:22px;
-color:#666;
+/* SECTION */
+
+section{
+padding:70px;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:14px;
+}
+
+.section-sub{
+text-align:center;
+font-size:20px;
+color:#6b7280;
+margin-bottom:40px;
+}
+
+.box-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:24px;
+border:1px solid #e5e7eb;
+box-shadow:0 10px 25px rgba(0,0,0,0.04);
+}
+
+.box h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.box p{
+font-size:17px;
+color:#6b7280;
 line-height:1.6;
 }
 
-button{
-background:#49a95c;
+/* FORM */
+
+.form-wrap{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+background:white;
+padding:35px;
+border-radius:30px;
+border:1px solid #e5e7eb;
+box-shadow:0 12px 30px rgba(0,0,0,0.05);
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:18px;
+border-radius:16px;
+border:1px solid #d8dee8;
+margin-bottom:16px;
+font-size:16px;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+.map{
+border-radius:24px;
+overflow:hidden;
+}
+
+/* FLOAT BUTTON */
+
+.float{
+position:fixed;
+right:20px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:100;
+}
+
+.float a{
+text-decoration:none;
+padding:16px 22px;
+border-radius:999px;
+font-weight:bold;
 color:white;
-border:none;
-padding:18px 30px;
+box-shadow:0 10px 24px rgba(0,0,0,0.2);
+}
+
+.call{
+background:#49a95c;
+}
+
+.zalo{
+background:#0b8cff;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+padding:40px 70px;
+margin-top:50px;
+}
+
+footer p{
+margin-top:10px;
+color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+header{
+height:auto;
+padding:20px;
+flex-direction:column;
+gap:18px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:40px 20px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
 font-size:20px;
-border-radius:15px;
-cursor:pointer;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.box-grid{
+grid-template-columns:1fr;
+}
+
+.form-wrap{
+grid-template-columns:1fr;
+}
+
+section{
+padding:40px 20px;
+}
+
+.image-box img{
+height:430px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="header">
-F88 Bồng Sơn
+<header>
+
+<div class="logo-wrap">
+
+<div class="logo">
+F88
 </div>
 
-<div class="main">
+<div class="logo-text">
+F88 247 Lê Duẩn
+</div>
 
-<div class="left">
+</div>
+
+<nav>
+<a href="#uudiem">Ưu điểm</a>
+<a href="#quytrinh">Quy trình</a>
+<a href="#taisan">Tài sản</a>
+<a href="#lienhe">Liên hệ</a>
+</nav>
+
+<div class="header-right">
+
+<div class="hotline">
+Hotline:<br>
+0847494567
+</div>
+
+<a href="tel:0847494567" class="btn btn-white">
+📞 Gọi ngay
+</a>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div>
+
+<div class="tag">
+📍 GẦN BẠN • HỖ TRỢ TẠI CHỖ
+</div>
 
 <h1>
-Hỗ trợ tài chính nhanh chóng cho bà con Bồng Sơn
+Hỗ trợ tài chính nhanh chóng, minh bạch cho bà con địa phương
 </h1>
 
 <p>
-Giải ngân nhanh trong 15 phút.
-Thủ tục đơn giản và hỗ trợ tận nơi.
+Giải ngân nhanh trong 15 phút. Thủ tục đơn giản bằng đăng ký xe máy, ô tô.
+Hỗ trợ tận tâm và tư vấn rõ ràng.
 </p>
 
-<button>
+<div class="hero-buttons">
+
+<a href="#lienhe" class="btn btn-green">
+Đăng ký tư vấn ngay
+</a>
+
+<a href="tel:0847494567" class="btn btn-white">
+📞 0847494567
+</a>
+
+</div>
+
+<div class="cards" id="uudiem">
+
+<div class="card">
+
+<div class="icon">
+⚡
+</div>
+
+<div>
+<h3>Giải ngân nhanh</h3>
+<p>Hỗ trợ nhanh tại quầy</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+📄
+</div>
+
+<div>
+<h3>Hồ sơ dễ dàng</h3>
+<p>Thủ tục đơn giản</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+🛡️
+</div>
+
+<div>
+<h3>Minh bạch rõ ràng</h3>
+<p>Thông tin minh bạch</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+🏠
+</div>
+
+<div>
+<h3>Ghé trực tiếp</h3>
+<p>PGD dễ tìm</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="image-box">
+
+<img src="f88.jpg">
+
+<div class="image-title">
+F88 247 Lê Duẩn
+</div>
+
+</div>
+
+</div>
+
+<!-- QUY TRÌNH -->
+
+<section id="quytrinh">
+
+<h2 class="section-title">
+Quy trình hỗ trợ
+</h2>
+
+<p class="section-sub">
+Nhanh chóng - minh bạch - dễ dàng
+</p>
+
+<div class="box-grid">
+
+<div class="box">
+<h3>1️⃣ Tư vấn</h3>
+<p>
+Nhân viên hỗ trợ tư vấn nhanh theo nhu cầu khách hàng.
+</p>
+</div>
+
+<div class="box">
+<h3>2️⃣ Hồ sơ</h3>
+<p>
+Chuẩn bị giấy tờ cơ bản và xác minh thông tin.
+</p>
+</div>
+
+<div class="box">
+<h3>3️⃣ Giải ngân</h3>
+<p>
+Hoàn tất thủ tục và nhận hỗ trợ nhanh chóng.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TÀI SẢN -->
+
+<section id="taisan">
+
+<h2 class="section-title">
+Tài sản hỗ trợ
+</h2>
+
+<p class="section-sub">
+Đa dạng phương án hỗ trợ
+</p>
+
+<div class="box-grid">
+
+<div class="box">
+<h3>🏍️ Xe máy</h3>
+<p>
+Hỗ trợ nhanh với đăng ký xe máy.
+</p>
+</div>
+
+<div class="box">
+<h3>🚗 Ô tô</h3>
+<p>
+Hạn mức linh hoạt theo nhu cầu.
+</p>
+</div>
+
+<div class="box">
+<h3>📱 Thiết bị khác</h3>
+<p>
+Liên hệ trực tiếp để được tư vấn thêm.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<section id="lienhe">
+
+<h2 class="section-title">
 Đăng ký tư vấn
+</h2>
+
+<p class="section-sub">
+Để lại thông tin để được hỗ trợ nhanh
+</p>
+
+<div class="form-wrap">
+
+<div>
+
+<input type="text" placeholder="Họ và tên">
+
+<input type="text" placeholder="Số điện thoại">
+
+<select>
+<option>Nhu cầu hỗ trợ</option>
+<option>Đăng ký xe máy</option>
+<option>Đăng ký ô tô</option>
+<option>Tư vấn khác</option>
+</select>
+
+<textarea placeholder="Ghi chú thêm"></textarea>
+
+<button class="btn btn-green">
+Gửi thông tin
 </button>
 
 </div>
 
-<div class="right">
+<div class="map">
 
-<img src="f88.jpg">
+<iframe
+src="https://www.google.com/maps?q=F88&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+loading="lazy">
+</iframe>
 
 </div>
 
 </div>
+
+</section>
+
+<!-- FLOAT -->
+
+<div class="float">
+
+<a href="tel:0847494567" class="call">
+📞 Gọi ngay
+</a>
+
+<a href="https://zalo.me/0847494567" class="zalo">
+💬 Zalo
+</a>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+F88 247 Lê Duẩn
+</h2>
+
+<p>
+Hotline: 0847494567
+</p>
+
+<p>
+Website hỗ trợ tư vấn khách hàng địa phương.
+</p>
+
+</footer>
 
 </body>
 </html>
