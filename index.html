@@ -1,794 +1,644 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thiệp Mời Cưới - Mỹ Hạnh & Phi Tuấn</title>
 
-  <title>F88 247 Lê Duẩn</title>
-
-  <meta name="description"
-    content="Hỗ trợ tài chính nhanh chóng - minh bạch - thủ tục đơn giản tại F88 247 Lê Duẩn">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
+    :root{
+      --brown:#7a1f2b;
+      --brown2:#a63b4d;
+      --cream:#fffdfd;
+      --paper:#ffffff;
+      --gold:#c9a86a;
+      --pink:#f4e5e8;
+      --text:#402126;
     }
 
-    body {
-      background: #f6f8f7;
-      color: #111827;
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Be Vietnam Pro',sans-serif;
+      color:var(--text);
+      background:#f7f2ef;
     }
 
-    /* HEADER */
-
-    header {
-      height: 90px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 70px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-      position: sticky;
-      top: 0;
-      z-index: 999;
+    .phone-frame{
+      max-width:470px;
+      margin:auto;
+      background:var(--paper);
+      min-height:100vh;
+      box-shadow:0 0 55px rgba(122,31,43,.16);
+      overflow:hidden;
+      position:relative;
     }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+    .intro{
+      position:fixed;
+      inset:0;
+      z-index:999;
+      background:
+        linear-gradient(rgba(255,246,238,.78), rgba(255,246,238,.92)),
+        url("assets/images/cover.jpg") center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      transition:.7s ease;
     }
 
-    .logo {
-      background: #49a95c;
-      color: white;
-      padding: 18px 24px;
-      border-radius: 16px;
-      font-size: 30px;
-      font-weight: 900;
+    .intro.hide{
+      opacity:0;
+      visibility:hidden;
+      transform:scale(1.04);
     }
 
-    .logo-text {
-      font-size: 24px;
-      font-weight: 900;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #111827;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #49a95c;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .hotline {
-      font-size: 18px;
-      font-weight: 900;
-      color: #d63d67;
-      line-height: 1.3;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 16px 26px;
-      border-radius: 16px;
-      font-weight: bold;
-      transition: 0.3s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-green {
-      background: #49a95c;
-      color: white;
-      box-shadow: 0 10px 25px rgba(73, 169, 92, 0.3);
-    }
-
-    .btn-green:hover {
-      transform: translateY(-3px);
-    }
-
-    .btn-white {
-      background: white;
-      border: 1px solid #dbe2ea;
-      color: #111827;
-    }
-
-    /* HERO */
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      padding: 80px 70px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e8f9eb;
-      color: #2f6f3d;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 800;
-      margin-bottom: 28px;
-      border: 1px solid #ccefd4;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      line-height: 1.3;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      font-size: 23px;
-      color: #6b7280;
-      line-height: 1.6;
-      margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 22px;
-      padding: 24px;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-    }
-
-    .icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 16px;
-      background: #f3f4f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-    }
-
-    .card h3 {
-      margin-bottom: 6px;
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    /* IMAGE */
-
-    .image-box {
-      position: relative;
-      border-radius: 35px;
-      overflow: hidden;
-      border: 10px solid white;
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
-    }
-
-    .image-box img {
-      width: 100%;
-      height: 680px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .image-title {
-      position: absolute;
-      left: 25px;
-      bottom: 25px;
-      background: rgba(0, 0, 0, 0.55);
+    .intro-card{
+      width:min(88%,430px);
+      border:1px solid rgba(122,69,54,.25);
+      background:rgba(255,250,245,.78);
       backdrop-filter: blur(8px);
-      color: white;
-      padding: 16px 22px;
-      border-radius: 18px;
-      font-size: 25px;
-      font-weight: bold;
+      padding:38px 24px 34px;
+      border-radius:26px;
+      box-shadow:0 25px 70px rgba(122,31,43,.18);
     }
 
-    /* SECTION */
-
-    section {
-      padding: 70px;
+    .intro .label{
+      letter-spacing:3px;
+      color:var(--brown);
+      font-size:12px;
+      text-transform:uppercase;
+      margin-bottom:16px;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 40px;
-      margin-bottom: 12px;
+    .script{
+      font-family:'Alex Brush',cursive;
+      color:var(--brown);
+      font-size:62px;
+      line-height:.95;
+      font-weight:400;
     }
 
-    .section-sub {
-      text-align: center;
-      color: #6b7280;
-      font-size: 21px;
-      margin-bottom: 45px;
+    .intro-date{
+      margin:20px auto 6px;
+      color:var(--gold);
+      font-family:'Playfair Display',serif;
+      font-size:22px;
+      letter-spacing:2px;
     }
 
-    .box-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    .open-btn{
+      margin-top:24px;
+      border:none;
+      padding:13px 28px;
+      border-radius:99px;
+      background:var(--brown);
+      color:white;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 12px 26px rgba(122,31,43,.28);
     }
 
-    .box {
-      background: white;
-      border-radius: 25px;
-      padding: 32px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+    .hero{
+      min-height:100vh;
+      background:
+        linear-gradient(to bottom, rgba(255,246,238,.12), rgba(255,246,238,.65) 58%, #fff7f0 95%),
+        url("assets/images/cover.jpg") center/cover;
+      display:flex;
+      align-items:flex-end;
+      padding:34px 22px 54px;
+      text-align:center;
+      position:relative;
     }
 
-    .box h3 {
-      font-size: 24px;
-      margin-bottom: 14px;
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:150px;
+      background:linear-gradient(transparent, #fff7f0);
     }
 
-    .box p {
-      color: #6b7280;
-      line-height: 1.7;
-      font-size: 17px;
+    .hero-content{
+      position:relative;
+      z-index:2;
+      width:100%;
+      color:var(--brown);
     }
 
-    /* FORM */
-
-    .form-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      background: white;
-      padding: 35px;
-      border-radius: 30px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+    .hero .save{
+      letter-spacing:4px;
+      font-size:12px;
+      text-transform:uppercase;
+      margin-bottom:10px;
+      color:#815041;
     }
 
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 18px;
-      border-radius: 16px;
-      border: 1px solid #d9e0ea;
-      margin-bottom: 16px;
-      font-size: 16px;
+    .hero h1{
+      font-family:'Alex Brush',cursive;
+      font-size:70px;
+      line-height:.94;
+      font-weight:400;
+      text-shadow:0 2px 8px rgba(255,255,255,.8);
     }
 
-    textarea {
-      resize: none;
-      height: 120px;
+    .hero .date-line{
+      margin-top:18px;
+      display:inline-flex;
+      align-items:center;
+      gap:14px;
+      font-family:'Playfair Display',serif;
+      font-size:18px;
+      color:#7a4536;
     }
 
-    .map {
-      border-radius: 24px;
-      overflow: hidden;
+    .date-line span{
+      width:34px;
+      height:1px;
+      background:#a87a67;
+      display:inline-block;
     }
 
-    /* FLOAT BUTTON */
-
-    .float {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 999;
+    section{
+      padding:58px 22px;
+      position:relative;
     }
 
-    .float a {
-      text-decoration: none;
-      color: white;
-      padding: 16px 24px;
-      border-radius: 999px;
-      font-weight: bold;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    .ornament{
+      width:90px;
+      height:2px;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+      margin:12px auto 22px;
     }
 
-    .call {
-      background: #49a95c;
+    h2{
+      font-family:'Playfair Display',serif;
+      font-size:32px;
+      text-align:center;
+      color:var(--brown);
+      font-weight:600;
+      margin-bottom:8px;
     }
 
-    .zalo {
-      background: #0b8cff;
+    .sub{
+      text-align:center;
+      line-height:1.75;
+      color:#7d6159;
+      font-size:14px;
+      max-width:390px;
+      margin:0 auto 26px;
     }
 
-    /* POPUP */
-
-    .popup {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
+    .invite-card{
+      background:#fffdfa;
+      border:1px solid #ead8d8;
+      border-radius:28px;
+      padding:28px 20px;
+      text-align:center;
+      box-shadow:0 15px 40px rgba(122,69,54,.08);
     }
 
-    .popup-box {
-      background: white;
-      width: 95%;
-      max-width: 450px;
-      padding: 35px;
-      border-radius: 28px;
-      text-align: center;
-      position: relative;
-      animation: popup 0.35s ease;
+    .parents{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin:18px 0 24px;
+      font-size:13px;
+      line-height:1.7;
+      color:#725348;
     }
 
-    @keyframes popup {
-      from {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
+    .big-names{
+      font-family:'Alex Brush',cursive;
+      color:var(--brown);
+      font-size:48px;
+      line-height:1;
+      margin:18px 0;
     }
 
-    .popup h2 {
-      margin-bottom: 14px;
-      font-size: 32px;
+    .photo-round{
+      width:245px;
+      height:245px;
+      margin:0 auto 25px;
+      border-radius:50%;
+      overflow:hidden;
+      border:8px solid #f4e5e8;
+      box-shadow:0 18px 42px rgba(122,69,54,.16);
     }
 
-    .popup p {
-      color: #6b7280;
-      margin-bottom: 22px;
-      line-height: 1.6;
+    .photo-round img{width:100%;height:100%;object-fit:cover}
+
+    .calendar{
+      background:#fffdfa;
+      border-radius:28px;
+      padding:24px 20px;
+      border:1px solid #ead8d8;
+      box-shadow:0 15px 40px rgba(122,69,54,.08);
+      text-align:center;
     }
 
-    .close {
-      position: absolute;
-      right: 20px;
-      top: 14px;
-      font-size: 30px;
-      cursor: pointer;
+    .month{
+      color:var(--brown);
+      font-weight:700;
+      letter-spacing:2px;
+      margin-bottom:18px;
+      font-family:'Playfair Display',serif;
     }
 
-    /* FOOTER */
-
-    footer {
-      background: #111827;
-      color: white;
-      padding: 40px 70px;
-      margin-top: 50px;
+    .week,.days{
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:7px;
+      font-size:13px;
     }
 
-    footer p {
-      color: #cbd5e1;
-      margin-top: 8px;
+    .week div{font-weight:700;color:#a16f5b}
+    .days div{
+      padding:8px 0;
+      border-radius:50%;
+      color:#69504a;
     }
 
-    /* MOBILE */
+    .days .active{
+      background:var(--brown);
+      color:white;
+      position:relative;
+      box-shadow:0 7px 14px rgba(122,69,54,.25);
+    }
 
-    @media(max-width:900px) {
+    .event-box{
+      background:#fffdfa;
+      border:1px solid #ead8d8;
+      border-radius:24px;
+      padding:22px 18px;
+      margin-top:16px;
+      text-align:center;
+      box-shadow:0 12px 35px rgba(122,69,54,.07);
+    }
 
-      header {
-        height: auto;
-        padding: 20px;
-        flex-direction: column;
-        gap: 18px;
-      }
+    .event-box h3{
+      font-family:'Playfair Display',serif;
+      color:var(--brown);
+      font-size:22px;
+      margin-bottom:10px;
+    }
 
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .event-box p{
+      line-height:1.8;
+      font-size:14px;
+      color:#6b514b;
+    }
 
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-      }
+    .countdown{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:9px;
+      margin-top:22px;
+    }
 
-      .hero h1 {
-        font-size: 34px;
-      }
+    .time{
+      background:#fffdfa;
+      border:1px solid #ead8d8;
+      border-radius:17px;
+      padding:14px 5px;
+      text-align:center;
+    }
 
-      .hero p {
-        font-size: 20px;
-      }
+    .time strong{
+      display:block;
+      color:var(--brown);
+      font-family:'Playfair Display',serif;
+      font-size:25px;
+    }
 
-      .cards,
-      .box-grid,
-      .form-wrap {
-        grid-template-columns: 1fr;
-      }
+    .time span{
+      font-size:11px;
+      color:#80645c;
+    }
 
-      section {
-        padding: 40px 20px;
-      }
+    .couple-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:20px;
+    }
 
-      .image-box img {
-        height: 430px;
-      }
+    .person{
+      text-align:center;
+      background:#fffdfa;
+      border:1px solid #ead8d8;
+      border-radius:24px;
+      padding:16px 12px;
+      box-shadow:0 12px 30px rgba(122,69,54,.07);
+    }
+
+    .person img{
+      width:100%;
+      aspect-ratio:3/4;
+      object-fit:cover;
+      border-radius:18px;
+      margin-bottom:10px;
+    }
+
+    .person h3{
+      font-family:'Alex Brush',cursive;
+      color:var(--brown);
+      font-size:34px;
+      font-weight:400;
+    }
+
+    .gallery{
+      columns:2;
+      column-gap:12px;
+      margin-top:22px;
+    }
+
+    .gallery img{
+      width:100%;
+      margin-bottom:12px;
+      border-radius:20px;
+      box-shadow:0 12px 25px rgba(55,28,22,.12);
+      break-inside:avoid;
+    }
+
+    .thanks{
+      background:
+        linear-gradient(rgba(122,69,54,.62), rgba(122,69,54,.72)),
+        url("assets/images/couple.jpg") center/cover;
+      color:white;
+      text-align:center;
+      padding:82px 22px;
+    }
+
+    .thanks h2{color:white}
+    .thanks .script{color:white;font-size:54px}
+    .thanks p{line-height:1.8;color:#fff1eb;margin-top:14px}
+
+    .action{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:22px;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      background:var(--brown);
+      color:white;
+      padding:12px 18px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+      box-shadow:0 9px 20px rgba(122,69,54,.22);
+    }
+
+    .btn.light{
+      background:#fffaf5;
+      color:var(--brown);
+    }
+
+    .music{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      border:none;
+      background:var(--brown);
+      color:white;
+      z-index:1000;
+      box-shadow:0 10px 24px rgba(0,0,0,.22);
+      cursor:pointer;
+    }
+
+    .float-nav{
+      position:fixed;
+      left:50%;
+      bottom:18px;
+      transform:translateX(-50%);
+      max-width:430px;
+      width:calc(100% - 82px);
+      background:rgba(255,250,245,.92);
+      border:1px solid #ead3c6;
+      border-radius:999px;
+      padding:8px 10px;
+      z-index:50;
+      display:flex;
+      justify-content:space-around;
+      box-shadow:0 12px 30px rgba(80,45,36,.14);
+      backdrop-filter:blur(7px);
+    }
+
+    .float-nav a{
+      color:var(--brown);
+      text-decoration:none;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .spacer{height:32px}
+
+    @media(min-width:700px){
+      body{padding:24px 0}
+      .phone-frame{border-radius:30px;min-height:calc(100vh - 48px)}
+      .intro-card{max-width:430px}
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
+<div class="intro" id="intro">
+  <div class="intro-card">
+    <div class="label">Wedding Invitation</div>
+    <div class="script">Mỹ Hạnh<br>& Phi Tuấn</div>
+    <div class="intro-date">19.07.2026</div>
+    <p style="font-size:14px;color:#735148;line-height:1.7">Trân trọng kính mời quý khách đến dự lễ thành hôn của chúng tôi</p>
+    <button class="open-btn" onclick="openInvitation()">Mở thiệp</button>
+  </div>
+</div>
 
-  <header>
+<audio id="music" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+<button class="music" onclick="toggleMusic()">♪</button>
 
-    <div class="logo-wrap">
-      <div class="logo">F88</div>
-      <div class="logo-text">F88 247 Lê Duẩn</div>
+<div class="phone-frame">
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="save">Save the date</div>
+      <h1>Mỹ Hạnh<br>& Phi Tuấn</h1>
+      <div class="date-line"><span></span>19.07.2026<span></span></div>
     </div>
+  </section>
 
-    <nav>
-      <a href="#uudiem">Ưu điểm</a>
-      <a href="#quytrinh">Quy trình</a>
-      <a href="#taisan">Tài sản</a>
-      <a href="#lienhe">Liên hệ</a>
-    </nav>
-
-    <div class="header-right">
-
-      <div class="hotline">
-        Hotline:<br>
-        0847494567
+  <section id="invite">
+    <h2>Thư mời</h2>
+    <div class="ornament"></div>
+    <div class="invite-card">
+      <p style="letter-spacing:2px;color:#8c6255;font-size:12px;text-transform:uppercase">Trân trọng kính mời</p>
+      <div class="parents">
+        <div>
+          <strong>Nhà gái</strong><br>
+          Ông/Bà: ................<br>
+          Địa chỉ: ................
+        </div>
+        <div>
+          <strong>Nhà trai</strong><br>
+          Ông/Bà: ................<br>
+          Địa chỉ: ................
+        </div>
       </div>
 
-      <a href="tel:0847494567" class="btn btn-white">
-        📞 Gọi ngay
-      </a>
-
-    </div>
-
-  </header>
-
-  <!-- HERO -->
-
-  <div class="hero">
-
-    <div>
-
-      <div class="tag">
-        📍 GẦN BẠN • HỖ TRỢ TẠI CHỖ
+      <div class="photo-round">
+        <img src="assets/images/couple.jpg" alt="Mỹ Hạnh & Phi Tuấn">
       </div>
 
-      <h1>
-        Hỗ trợ tài chính nhanh chóng, minh bạch cho bà con địa phương
-      </h1>
-
-      <p>
-        Giải ngân nhanh trong 15 phút. Thủ tục đơn giản bằng đăng ký xe máy, ô tô.
-        Hỗ trợ tận tâm và tư vấn rõ ràng.
+      <p>Đến dự buổi tiệc chung vui cùng gia đình chúng tôi</p>
+      <div class="big-names">Mỹ Hạnh & Phi Tuấn</div>
+      <p style="font-size:14px;line-height:1.8;color:#71554d">
+        Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi.
       </p>
-
-      <div class="hero-buttons">
-
-        <a href="#lienhe" class="btn btn-green">
-          Đăng ký tư vấn ngay
-        </a>
-
-        <a href="tel:0847494567" class="btn btn-white">
-          📞 0847494567
-        </a>
-
-      </div>
-
-      <div class="cards" id="uudiem">
-
-        <div class="card">
-          <div class="icon">⚡</div>
-          <div>
-            <h3>Giải ngân nhanh</h3>
-            <p>Hỗ trợ nhanh tại quầy</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="icon">📄</div>
-          <div>
-            <h3>Hồ sơ dễ dàng</h3>
-            <p>Thủ tục đơn giản</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <div>
-            <h3>Minh bạch rõ ràng</h3>
-            <p>Thông tin minh bạch</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="icon">🏠</div>
-          <div>
-            <h3>Ghé trực tiếp</h3>
-            <p>Phòng giao dịch dễ tìm</p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-
-    <div class="image-box">
-
-      <img src="f88.jpg">
-
-      <div class="image-title">
-        F88 247 Lê Duẩn
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- QUY TRÌNH -->
-
-  <section id="quytrinh">
-
-    <h2 class="section-title">
-      Quy trình hỗ trợ
-    </h2>
-
-    <p class="section-sub">
-      Nhanh chóng - minh bạch - dễ dàng
-    </p>
-
-    <div class="box-grid">
-
-      <div class="box">
-        <h3>1️⃣ Tư vấn</h3>
-        <p>
-          Nhân viên hỗ trợ tư vấn nhanh theo nhu cầu khách hàng.
-        </p>
-      </div>
-
-      <div class="box">
-        <h3>2️⃣ Hồ sơ</h3>
-        <p>
-          Chuẩn bị giấy tờ cơ bản và xác minh thông tin nhanh chóng.
-        </p>
-      </div>
-
-      <div class="box">
-        <h3>3️⃣ Giải ngân</h3>
-        <p>
-          Hoàn tất thủ tục và nhận hỗ trợ nhanh tại phòng giao dịch.
-        </p>
-      </div>
-
-    </div>
-
   </section>
 
-  <!-- TÀI SẢN -->
+  <section id="date">
+    <h2>Ngày cưới</h2>
+    <div class="ornament"></div>
+    <p class="sub">Chủ nhật, ngày 19 tháng 07 năm 2026</p>
 
-  <section id="taisan">
-
-    <h2 class="section-title">
-      Tài sản hỗ trợ
-    </h2>
-
-    <p class="section-sub">
-      Đa dạng phương án phù hợp nhiều nhu cầu
-    </p>
-
-    <div class="box-grid">
-
-      <div class="box">
-        <h3>🏍️ Xe máy</h3>
-        <p>
-          Hỗ trợ nhanh bằng đăng ký xe máy.
-        </p>
+    <div class="calendar">
+      <div class="month">THÁNG 07 / 2026</div>
+      <div class="week">
+        <div>T2</div><div>T3</div><div>T4</div><div>T5</div><div>T6</div><div>T7</div><div>CN</div>
       </div>
-
-      <div class="box">
-        <h3>🚗 Ô tô</h3>
-        <p>
-          Hạn mức linh hoạt theo nhu cầu khách hàng.
-        </p>
+      <div class="days">
+        <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+        <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+        <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div class="active">19</div>
+        <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+        <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div></div><div></div>
       </div>
-
-      <div class="box">
-        <h3>📱 Tài sản khác</h3>
-        <p>
-          Liên hệ trực tiếp để được tư vấn thêm.
-        </p>
-      </div>
-
     </div>
 
+    <div class="countdown">
+      <div class="time"><strong id="d">0</strong><span>Ngày</span></div>
+      <div class="time"><strong id="h">0</strong><span>Giờ</span></div>
+      <div class="time"><strong id="m">0</strong><span>Phút</span></div>
+      <div class="time"><strong id="s">0</strong><span>Giây</span></div>
+    </div>
   </section>
 
-  <!-- FORM -->
+  <section id="event">
+    <h2>Thông tin lễ cưới</h2>
+    <div class="ornament"></div>
 
-  <section id="lienhe">
-
-    <h2 class="section-title">
-      Đăng ký tư vấn
-    </h2>
-
-    <p class="section-sub">
-      Để lại thông tin để được hỗ trợ nhanh
-    </p>
-
-    <div class="form-wrap">
-
-      <div>
-
-        <form id="contactForm">
-
-          <input type="text" id="name" placeholder="Họ và tên" required>
-
-          <input type="text" id="phone" placeholder="Số điện thoại" required>
-
-          <select id="service">
-            <option>Đăng ký xe máy</option>
-            <option>Đăng ký ô tô</option>
-            <option>Tư vấn khác</option>
-          </select>
-
-          <textarea id="note" placeholder="Ghi chú thêm"></textarea>
-
-          <button type="submit" class="btn btn-green">
-            Gửi thông tin
-          </button>
-
-        </form>
-
+    <div class="event-box">
+      <h3>Lễ Vu Quy</h3>
+      <p><strong>09:00 - 19/07/2026</strong></p>
+      <p>Tại tư gia nhà gái</p>
+      <p>Thay địa chỉ cụ thể tại đây</p>
+      <div class="action">
+        <a class="btn" href="https://maps.google.com" target="_blank">Xem bản đồ</a>
       </div>
-
-      <div class="map">
-
-        <iframe
-          src="https://www.google.com/maps?q=F88&output=embed"
-          width="100%"
-          height="450"
-          style="border:0;"
-          loading="lazy">
-        </iframe>
-
-      </div>
-
     </div>
 
+    <div class="event-box">
+      <h3>Tiệc Cưới</h3>
+      <p><strong>11:00 - 19/07/2026</strong></p>
+      <p>Nhà hàng / Tư gia</p>
+      <p>Thay địa chỉ cụ thể tại đây</p>
+      <div class="action">
+        <a class="btn" href="https://maps.google.com" target="_blank">Chỉ đường</a>
+        <a class="btn light" href="https://forms.gle/THAY-LINK-FORM" target="_blank">Xác nhận</a>
+      </div>
+    </div>
   </section>
 
-  <!-- FLOAT -->
+  <section id="couple">
+    <h2>Cô dâu & Chú rể</h2>
+    <div class="ornament"></div>
+    <p class="sub">Cảm ơn vì đã là một phần trong ngày hạnh phúc của chúng tôi.</p>
 
-  <div class="float">
-
-    <a href="tel:0847494567" class="call">
-      📞 Gọi ngay
-    </a>
-
-    <a href="https://zalo.me/0847494567" class="zalo">
-      💬 Zalo
-    </a>
-
-  </div>
-
-  <!-- POPUP -->
-
-  <div class="popup" id="popup">
-
-    <div class="popup-box">
-
-      <div class="close" onclick="closePopup()">
-        ×
+    <div class="couple-grid">
+      <div class="person">
+        <img src="assets/images/bride.jpg" alt="Cô dâu">
+        <h3>Mỹ Hạnh</h3>
+        <p>Cô dâu</p>
       </div>
-
-      <h2>
-        Nhận tư vấn ngay
-      </h2>
-
-      <p>
-        Để lại số điện thoại để nhân viên hỗ trợ nhanh chóng.
-      </p>
-
-      <a href="#lienhe" class="btn btn-green" onclick="closePopup()">
-        Đăng ký ngay
-      </a>
-
+      <div class="person">
+        <img src="assets/images/groom.jpg" alt="Chú rể">
+        <h3>Phi Tuấn</h3>
+        <p>Chú rể</p>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <section id="album">
+    <h2>Album ảnh</h2>
+    <div class="ornament"></div>
+    <p class="sub">Những khoảnh khắc yêu thương được lưu giữ trong hành trình của chúng tôi.</p>
 
-  <!-- FOOTER -->
+    <div class="gallery">
+      <img src="assets/images/album1.jpg" alt="">
+      <img src="assets/images/album2.jpg" alt="">
+      <img src="assets/images/album3.jpg" alt="">
+      <img src="assets/images/album4.jpg" alt="">
+      <img src="assets/images/album5.jpg" alt="">
+      <img src="assets/images/album6.jpg" alt="">
+    </div>
+  </section>
 
-  <footer>
-
-    <h2>
-      F88 247 Lê Duẩn
-    </h2>
-
+  <section class="thanks">
+    <h2>Thank You</h2>
+    <div class="script">Mỹ Hạnh & Phi Tuấn</div>
     <p>
-      Hotline: 0847494567
+      Cảm ơn quý khách đã dành thời gian đến chung vui và gửi những lời chúc tốt đẹp nhất đến gia đình chúng tôi.
     </p>
+  </section>
 
-    <p>
-      Website hỗ trợ tư vấn khách hàng địa phương.
-    </p>
+  <div class="spacer"></div>
+</div>
 
-  </footer>
+<nav class="float-nav">
+  <a href="#home">Đầu</a>
+  <a href="#date">Ngày</a>
+  <a href="#event">Lễ</a>
+  <a href="#album">Ảnh</a>
+</nav>
 
-  <!-- SCRIPT -->
+<script>
+  function openInvitation(){
+    document.getElementById('intro').classList.add('hide');
+    const music = document.getElementById('music');
+    music.play().catch(()=>{});
+  }
 
-  <script>
+  function toggleMusic(){
+    const music = document.getElementById('music');
+    if(music.paused){ music.play(); } else { music.pause(); }
+  }
 
-    // FORM GOOGLE SHEET
-
-    document.getElementById("contactForm")
-      .addEventListener("submit", async function (e) {
-
-        e.preventDefault();
-
-        const data = {
-          name: document.getElementById("name").value,
-          phone: document.getElementById("phone").value,
-          service: document.getElementById("service").value
-        };
-
-        await fetch("https://script.google.com/macros/s/AKfycbzhO3PLcTkC2rWPlAGRJkqI6ifV1DAuWq1cubAkq4iscAHeSV3d7XqtXf-2CJeR-HC2Wg/exec", {
-          method: "POST",
-          body: JSON.stringify(data)
-        });
-
-        alert("Gửi thông tin thành công!");
-
-        this.reset();
-
-      });
-
-    // POPUP
-
-    setTimeout(() => {
-      document.getElementById("popup").style.display = "flex";
-    }, 5000);
-
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-
-  </script>
-
+  const wedding = new Date("2026-07-19T09:00:00").getTime();
+  function count(){
+    const now = Date.now();
+    let diff = wedding - now;
+    if(diff < 0) diff = 0;
+    document.getElementById("d").innerText = Math.floor(diff/(1000*60*60*24));
+    document.getElementById("h").innerText = Math.floor((diff/(1000*60*60))%24);
+    document.getElementById("m").innerText = Math.floor((diff/(1000*60))%60);
+    document.getElementById("s").innerText = Math.floor((diff/1000)%60);
+  }
+  setInterval(count,1000);
+  count();
+</script>
 </body>
-
 </html>
